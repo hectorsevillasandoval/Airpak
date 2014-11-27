@@ -1,0 +1,92 @@
+/***********************************************************
+*
+*    Autor: Héctor Sevilla
+*    Fecha: 27/11/2014
+*    Descripción: Estilo css para página web de Airpak
+*
+************************************************************/
+
+@import 'normalize.styl'
+@import 'fonts.styl'
+@import '_sprite.styl'
+
+
+html
+    font-size 16px
+body
+    font-family 'open sans', arial
+    font-weight 400
+    font-size 16px
+a
+    &:link
+    &:visited
+        text-decoration none
+ul
+p
+h1
+h2
+h3
+    margin 0
+    padding 0
+ul
+    list-style none
+rems(pixel)
+    (pixel/16)rem
+alinear()
+    display inline-block
+    vertical-align top
+
+// COLORS
+azul-oscuro = #062138
+azul-claro = #006ac7
+gris = #c7c7c7
+azul-gradiente = #4da5f1
+amarillo = #d0bb00
+inputs = #ededed
+
+[class^="icon-"], [class*=" icon-"]
+    font-family 'icomoon'
+    speak none
+    font-style normal
+    font-weight normal
+    font-variant normal
+    text-transform none
+    line-height 1
+    -webkit-font-smoothing antialiased
+    -moz-osx-font-smoothing grayscale
+
+.icon-twitter
+    &:before
+        content "\f081"
+
+.icon-facebook
+    &:before
+        content "\f082"
+
+.icon-phone
+    &:before
+        content "\f095"
+
+.icon-caret-down
+    &:before
+        content "\f0d7"
+
+.icon-caret-right
+    &:before
+        content "\f0da"
+
+.icon-envelope
+    &:before
+        content "\f0e0"
+
+.icon-angle-right
+    &:before
+        content "\f105"
+.icon-movistar
+    sprite($movistar)
+
+
+    
+
+
+
