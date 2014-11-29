@@ -9,12 +9,12 @@
 @import 'normalize.styl'
 @import 'fonts.styl'
 @import '_sprite.styl'
-
+@import 'nib'
 
 html
     font-size 16px
 body
-    font-family 'open sans', arial
+    font-family OSansReg, arial
     font-weight 400
     font-size 16px
 a
@@ -26,20 +26,30 @@ p
 h1
 h2
 h3
+figure
     margin 0
     padding 0
-ul
-    list-style none
 rems(pixel)
     (pixel/16)rem
 alinear()
     display inline-block
     vertical-align top
+h1
+h2
+h3
+h4
+    font-family OSansBold
+h3
+    font-size rems(22)
+ul
+    list-style none
+
 
 // COLORS
 azul-oscuro = #062138
 azul-claro = #006ac7
 gris = #c7c7c7
+gris-footer= #24262c
 azul-gradiente = #4da5f1
 amarillo = #d0bb00
 inputs = #ededed
@@ -84,7 +94,248 @@ inputs = #ededed
         content "\f105"
 .icon-movistar
     sprite($movistar)
-    
+.icon-westernUnion
+    sprite($westernUnion)
+.icon-mapfre
+    sprite($mapfre)
+.icon-claro
+    sprite($claro)
+.icon-grupoCoen
+    sprite($grupoCoen)
+.icon-ListoMarketing
+    sprite($ListoMarketing)
+
+// HEADER INICIO
+header
+    background-color azul-oscuro
+    padding 2rem 0
+    text-align center
+    color white
+    .logotipo
+        margin-bottom 1rem
+    .infoCliente
+        p
+            font-family OSansBold
+        span
+            padding 0 .5rem
+            display inline-block
+            font-size rems(18)
+            &:before
+                color azul-claro
+                vertical-align middle
+                padding-right 8px
+    .redesSociales
+        ul
+            margin 1rem auto 0 auto
+            li
+                alinear()
+                margin 0 .5rem
+                a
+                    &:link
+                    &:visited
+                        color azul-claro
+                        font-size 2.5rem
+        .formulario
+            margin-top 1rem
+            select
+                border 1px solid azul-claro
+                color azul-claro
+                background-color transparent
+                padding .3rem .8rem
+                width rems(180)
+// HEADER FIN
+
+// SLIDER INICIO
+.slider
+    background-color azul-claro
+    .wrap
+        font-size 0
+        img
+            max-width 100%
+            height auto
+// SLIDER FIN
+// SERVICIOS INICIO
+section
+    padding 2rem 1rem
+.servicios
+    article
+        max-width rems(286)
+        background-color azul-oscuro
+        border-bottom 10px solid gris
+        height rems(280)
+        margin 2rem auto
+        figure
+            font-size 0
+            margin 0
+        .titulo
+            background-color black
+            text-align right
+            clearfix()
+            height rems(60)
+            h2
+                alinear()
+                color white
+                max-width rems(230)
+                text-align left
+                float left
+                padding 0 .8rem .5rem 1rem
+                box-sizing border-box
+                font-size rems(22)
+            .boton
+                alinear()
+                text-align center
+                width rems(56)
+                background-color azul-claro
+                height 100%
+                a
+                    &:link
+                    &:visited
+                        display inline-block
+                        font-size 1.5rem
+                        color white
+                        padding .9rem
+        .contenido
+            text-align left
+            color white
+            box-sizing border-box
+            padding 1rem
+// SERVICIOS FIN
+// ALIADOS INICIO
+.aliados
+    background-color gris
+    text-align center
+    ul
+        li
+            span
+                margin 1rem auto
+// ALIADOS FIN
+// FOOTER INICIO
+footer
+    background-color gris-footer
+    color white
+    text-align center
+    padding 2rem 1rem
+    span
+        margin .6rem auto
+    .contacto
+        span
+            padding 0 .5rem
+            display inline-block
+            font-size rems(14)
+            &:before
+                color azul-claro
+                vertical-align middle
+                padding-right 8px
+    article
+        margin-bottom 1.2rem
+        h3
+            color azul-claro
+        ul
+            width rems(200)
+            margin-left auto
+            margin-right auto
+            li
+                text-align left
+                font-family OSansLight
+                margin .7rem 0
+                &:before
+                    content "\f0da"
+                    color azul-claro
+                    font-family icomoon
+                    padding-right .5rem
+                a
+                    &:link
+                    &:visited
+                        color white
+                    &:hover
+                        text-decoration underline
+// FOOTER FIN
+
+@media screen and (min-width:768px)
+    header
+        &.medium
+            .wrap
+                > div
+                    display inline-block
+                    vertical-align middle
+                    margin 0 .8rem
+                .logotipo
+                    margin-bottom 0
+                .infoCliente
+                    span
+                        font-size 14px
+                .redesSociales
+                    ul
+                        margin 0
+    .servicios
+        &.medium
+            padding-left 2rem
+            padding-right 2rem
+            text-align center
+            article
+                alinear()
+                &:nth-child(odd)
+                    margin-right 5rem
+    .aliados
+        &.medium
+            ul
+                li
+                    display inline-block
+                    vertical-align middle
+                    margin 0 4rem
+    footer
+        &.medium
+            padding-left 2rem
+            padding-right 2rem
+            .wrap
+                text-align center
+                article
+                    alinear()
+                    text-align left
+                    width (100/3)%
+                    margin-bottom 0
+                    span
+                        margin-left 0
+                        margin-right 0
+                        font-size 14px
+
+@media screen and (min-width:1000px)
+    .wrap
+        margin-left auto
+        margin-right auto
+        width rems(940)
+    header
+        &.large
+            text-align left
+            .wrap
+                .logotipo
+                .redesSociales
+                    margin 0
+                    width 25%
+                .infoCliente
+                    margin 0
+                    text-align center
+                    width 49%
+                .redesSociales
+                    text-align right
+    .servicios
+        &.large
+            article
+                margin-right 1.7rem !important
+                &:nth-child(3n + 3)
+                    margin-right 0 !important
+    .aliados
+        &.large
+            ul
+                li
+                    margin 0 2rem
+    footer
+        &.large
+            h3
+                text-align center
+            ul
+                padding-left 5rem
+
 
 
 
