@@ -84,13 +84,13 @@ gulp.task('watch', function() {
     gulp.watch('img/*', ['imagemin']);
     gulp.watch('img/icons/*', ['sprites']);
     gulp.watch('*.html', ['minify']);
-    gulp.watch('../public/css/main.css', ['uncss']);
+    /*gulp.watch('../public/css/main.css', ['uncss']);*/
 });
 gulp.task('uncss', function() {
     // content
     gulp.src('../public/css/main.css')
         .pipe(uncss({
-            html: ['index.html']
+            html: ['index.html', 'transferencia-dinero.html', 'entrega-inmediata.html', 'agencias.html']
         }))
     /*.pipe(compressor())*/
     .pipe(gulp.dest('../public/uncss/'));

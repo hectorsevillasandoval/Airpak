@@ -14,6 +14,7 @@ article,
 figure,
 footer,
 header,
+hgroup,
 section {
   display: block;
 }
@@ -25,6 +26,11 @@ a {
 a:active,
 a:hover {
   outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
 }
 
 img {
@@ -100,6 +106,7 @@ a:visited {
 
 ul,
 p,
+h1,
 h2,
 h3,
 figure {
@@ -107,13 +114,23 @@ figure {
   padding: 0;
 }
 
+h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: OSansBold;
 }
 
-h3 {
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
   font-size: 1.375rem;
+}
+
+h3 {
+  font-size: 1.125rem;
 }
 
 ul {
@@ -207,6 +224,28 @@ ul {
   height: 38px;
 }
 
+.icon-comoEnviarDinero {
+  background-position: -5px -942px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  width: 83px;
+  height: 82px;
+}
+
+.icon-comoRecibirDinero {
+  background-position: -5px -851px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  width: 82px;
+  height: 81px;
+}
+
+.texto p {
+  margin-bottom: .8rem;
+}
+
 header {
   background-color: #062138;
   padding: 2rem 0;
@@ -271,6 +310,50 @@ header .redesSociales .formulario select {
 }
 
 .slider .wrap img {
+  max-width: 100%;
+  height: auto;
+}
+
+.banner-principal {
+  background-color: #006ac7;
+  min-height: 6rem;
+}
+
+.banner-principal .wrap {
+  background: -webkit-linear-gradient(top, #4da5f1, #006ac7);
+  background: -moz-linear-gradient(top, #4da5f1, #006ac7);
+  background: -o-linear-gradient(top, #4da5f1, #006ac7);
+  background: -ms-linear-gradient(top, #4da5f1, #006ac7);
+  background: linear-gradient(to bottom, #4da5f1, #006ac7);
+  position: relative;
+}
+
+.banner-principal .wrap hgroup {
+  text-align: center;
+}
+
+.banner-principal .wrap hgroup h4,
+.banner-principal .wrap hgroup h5 {
+  margin: 0;
+}
+
+.banner-principal .wrap hgroup h4 {
+  font-family: OSansLight;
+  font-size: 2.125rem;
+}
+
+.banner-principal .wrap hgroup h5 {
+  font-family: OSansBold;
+  font-size: 3.125rem;
+  text-transform: uppercase;
+}
+
+.banner-principal .wrap .imagen {
+  font-size: 0;
+  text-align: center;
+}
+
+.banner-principal .wrap .imagen img {
   max-width: 100%;
   height: auto;
 }
@@ -356,6 +439,33 @@ section {
 
 .aliados ul li span {
   margin: 1rem auto;
+}
+
+section.principal h1,
+section.principal h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+section.principal h3 span {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section.principal ul li:before {
+  content: "\f0da";
+  color: #d0bb00;
+  font-family: icomoon;
+  padding-right: .5rem;
+}
+
+section.principal ul li ul {
+  margin: 1rem;
+  list-style-type: disc;
+}
+
+section.principal ul li ul li:before {
+  content: "";
 }
 
 footer {
@@ -514,6 +624,47 @@ footer article ul li a:hover {
 
   .servicios.large article:nth-child(3n + 3) {
     margin-right: 0 !important;
+  }
+
+  section.large .texto,
+  section.large ul {
+    padding: 0 6rem;
+    font-size: .875rem;
+  }
+
+  section.large ul li {
+    margin: .8rem;
+  }
+
+  section.large ul li li {
+    margin: 0;
+  }
+
+  section.large h3 {
+    margin: 3rem 0;
+  }
+
+  section.large h3 span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .banner-principal.large {
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 15.625rem;
+  }
+
+  .banner-principal.large hgroup,
+  .banner-principal.large .imagen {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .banner-principal.large hgroup {
+    text-align: left;
   }
 
   .aliados.large ul li {

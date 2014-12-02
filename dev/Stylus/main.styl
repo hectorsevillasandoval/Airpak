@@ -34,13 +34,20 @@ rems(pixel)
 alinear()
     display inline-block
     vertical-align top
+centrar()
+    margin-left auto
+    margin-right auto
 h1
 h2
 h3
 h4
     font-family OSansBold
-h3
+h1
+    font-size rems(24)
+h2
     font-size rems(22)
+h3
+    font-size rems(18)
 ul
     list-style none
 
@@ -104,6 +111,28 @@ inputs = #ededed
     sprite($grupoCoen)
 .icon-ListoMarketing
     sprite($ListoMarketing)
+.icon-comoEnviarDinero
+    sprite($comoEnviarDinero)
+.icon-comoRecibirDinero
+    sprite($comoRecibirDinero)
+.icon-tarjetasPrepago
+    sprite($tarjetasPrepago)
+.icon-caracteristicas
+    sprite($caracteristicas)
+.icon-comoObtenerla
+    sprite($comoObtenerla)
+.icon-comoRecargarla
+    sprite($comoRecargarla)
+.icon-beneficios
+    sprite($beneficios)
+.icon-masterCard
+    sprite($masterCard)
+.icon-recarga
+    sprite($recarga)
+
+.texto
+    p
+        margin-bottom .8rem
 
 // HEADER INICIO
 header
@@ -153,7 +182,37 @@ header
         img
             max-width 100%
             height auto
+.banner-principal
+    background-color azul-claro
+    min-height 6rem
+    .wrap
+        background linear-gradient(top, azul-gradiente, azul-claro)
+        position relative
+        hgroup
+            text-align center
+            h4
+            h5
+                margin 0
+            h4
+                font-family OSansLight
+                font-size rems(34)
+            h5
+                font-family OSansBold
+                font-size rems(50)
+                text-transform uppercase
+        .imagen
+            font-size 0
+            text-align center
+            img
+                max-width 100%
+                height auto
 // SLIDER FIN
+// MAPA INICIO
+.mapa
+    max-height rems(350)
+    iframe
+        max-width 100%
+// MAPA FIN
 // SERVICIOS INICIO
 section
     padding 2rem 1rem
@@ -209,6 +268,43 @@ section
             span
                 margin 1rem auto
 // ALIADOS FIN
+
+// SECCION PRINCIPAL INICIO
+section
+    &.principal
+        h1
+        h3
+            text-align center
+            margin-bottom 1rem
+        h3
+            span
+                centrar()
+        ul
+            li
+                &:before
+                    content "\f0da"
+                    color amarillo
+                    font-family icomoon
+                    padding-right .5rem
+                ul
+                    margin 1rem
+                    list-style-type disc
+                    li
+                        &:before
+                            content ""
+        .imagen
+            text-align center
+            margin-bottom 2.3rem
+            img
+                max-width 100%
+                height auto
+        .icon-masterCard
+        .icon-recarga
+            centrar()
+
+// SECCION PRINCIPAL FIN
+
+
 // FOOTER INICIO
 footer
     background-color gris-footer
@@ -283,6 +379,15 @@ footer
                     display inline-block
                     vertical-align middle
                     margin 0 4rem
+    .telecomunicadoras
+        &.medium
+            text-align center
+            margin 2rem 0
+            ul
+                li
+                    display inline-block
+                    vertical-align middle
+                    margin 0 2.5rem
     footer
         &.medium
             padding-left 2rem
@@ -324,6 +429,38 @@ footer
                 margin-right 1.7rem !important
                 &:nth-child(3n + 3)
                     margin-right 0 !important
+    section
+        &.large
+            .texto
+            ul
+                padding 0 6rem
+                font-size rems(14)
+                li
+                    margin .8rem
+                    li
+                        margin 0
+            h3
+                margin 3rem 0
+                span
+                    display inline-block
+                    vertical-align middle
+            .icon-recarga
+                display inline-block
+    .banner-principal
+        &.large
+            text-align center
+            box-sizing border-box
+            height rems(250)
+            hgroup
+            .imagen
+                display inline-block
+                vertical-align middle
+            hgroup
+                text-align left
+        &.agencias
+            .wrap
+                padding-top 3rem
+
     .aliados
         &.large
             ul
